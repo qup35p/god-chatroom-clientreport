@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        // †ÎÀıÄ£Ê½
+        // å–®ä¾‹æ¨¡å¼
         if (instance == null)
         {
             instance = this;
@@ -72,7 +72,7 @@ public class AudioManager : MonoBehaviour
 
     private void InitializeAudioManager()
     {
-        // ½¨Á¢ÒôĞ§×Öµä
+        // å»ºç«‹éŸ³æ•ˆå­—å…¸
         soundDictionary = new Dictionary<string, SoundClip>();
         foreach (SoundClip sound in soundClips)
         {
@@ -82,7 +82,7 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        // ÔOÖÃÒôÔ´
+        // è¨­ç½®éŸ³æº
         if (musicSource == null)
         {
             musicSource = gameObject.AddComponent<AudioSource>();
@@ -96,7 +96,7 @@ public class AudioManager : MonoBehaviour
             uiSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // é_Ê¼²¥·Å±³¾°Òô˜·
+        // é–‹å§‹æ’­æ”¾èƒŒæ™¯éŸ³æ¨‚
         if (backgroundMusic != null)
         {
             PlayBackgroundMusic();
@@ -105,7 +105,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        // ÔOÖÃ³õÊ¼ÒôÁ¿
+        // è¨­ç½®åˆå§‹éŸ³é‡
         UpdateAllVolumes();
     }
 
@@ -157,7 +157,7 @@ public class AudioManager : MonoBehaviour
         {
             SoundClip sound = soundDictionary[soundName];
 
-            // ™z²éËùÓĞÒôÔ´ÊÇ·ñÕıÔÚ²¥·Å´ËÒôĞ§
+            // æª¢æŸ¥æ‰€æœ‰éŸ³æºæ˜¯å¦æ­£åœ¨æ’­æ”¾æ­¤éŸ³æ•ˆ
             if (musicSource.clip == sound.clip && musicSource.isPlaying)
             {
                 musicSource.Stop();
@@ -302,7 +302,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // ß[‘òÌØ¶¨ÒôĞ§·½·¨
+    // éŠæˆ²ç‰¹å®šéŸ³æ•ˆæ–¹æ³•
     public void PlayButtonClick()
     {
         PlaySound("button_click", AudioSourceType.UI);
@@ -328,14 +328,14 @@ public class AudioManager : MonoBehaviour
         PlaySound("game_end", AudioSourceType.SFX);
     }
 
-    // ÔÚß[‘ò½YÊø•rÕ{ÓÃ
+    // åœ¨éŠæˆ²çµæŸæ™‚èª¿ç”¨
     public void OnGameEnd()
     {
         PlayGameEnd();
         FadeOutMusic(3f);
     }
 
-    // Ìí¼ÓĞÂÒôĞ§µ½×Öµä
+    // æ·»åŠ æ–°éŸ³æ•ˆåˆ°å­—å…¸
     public void AddSound(string name, AudioClip clip, float volume = 1f, float pitch = 1f, bool loop = false)
     {
         SoundClip newSound = new SoundClip
@@ -354,13 +354,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // ™z²éÒôĞ§ÊÇ·ñ´æÔÚ
+    // æª¢æŸ¥éŸ³æ•ˆæ˜¯å¦å­˜åœ¨
     public bool HasSound(string soundName)
     {
         return soundDictionary.ContainsKey(soundName);
     }
 
-    // «@È¡®”Ç°²¥·Å î‘B
+    // ç²å–ç•¶å‰æ’­æ”¾ç‹€æ…‹
     public bool IsSoundPlaying(AudioSourceType sourceType)
     {
         AudioSource source = GetAudioSource(sourceType);

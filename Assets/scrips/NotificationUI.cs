@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -39,7 +39,7 @@ public class NotificationUI : MonoBehaviour
             }
         }
 
-        // ³õÊ¼ÔOéÍ¸Ã÷
+        // åˆå§‹è¨­ç‚ºé€æ˜
         canvasGroup.alpha = 0f;
     }
 
@@ -50,19 +50,19 @@ public class NotificationUI : MonoBehaviour
         isInitialized = true;
         originalPosition = rectTransform.localPosition;
 
-        // ÔOÖÃÓÏ¢ÎÄ×Ö
+        // è¨­ç½®è¨Šæ¯æ–‡å­—
         if (messageText != null)
         {
             messageText.text = message;
         }
 
-        // ÔOÖÃ±³¾°îÉ«
+        // è¨­ç½®èƒŒæ™¯é¡è‰²
         SetNotificationColor(type);
 
-        // ÔOÖÃ³õÊ¼Î»ÖÃ£¨ÉÔÎ¢ÉÏÒÆ£©
+        // è¨­ç½®åˆå§‹ä½ç½®ï¼ˆç¨å¾®ä¸Šç§»ï¼‰
         rectTransform.localPosition = originalPosition + Vector3.up * movementDistance;
 
-        // é_Ê¼„Ó®‹ĞòÁĞ
+        // é–‹å§‹å‹•ç•«åºåˆ—
         StartCoroutine(NotificationSequence(displayTime));
     }
 
@@ -91,7 +91,7 @@ public class NotificationUI : MonoBehaviour
             backgroundImage.color = targetColor;
         }
 
-        // ¸ù“ş±³¾°îÉ«Õ{ÕûÎÄ×ÖîÉ«
+        // æ ¹æ“šèƒŒæ™¯é¡è‰²èª¿æ•´æ–‡å­—é¡è‰²
         if (messageText != null)
         {
             float brightness = targetColor.r * 0.299f + targetColor.g * 0.587f + targetColor.b * 0.114f;
@@ -101,16 +101,16 @@ public class NotificationUI : MonoBehaviour
 
     private IEnumerator NotificationSequence(float displayTime)
     {
-        // µ­Èë„Ó®‹
+        // æ·¡å…¥å‹•ç•«
         yield return StartCoroutine(FadeIn());
 
-        // µÈ´ıï@Ê¾•rég
+        // ç­‰å¾…é¡¯ç¤ºæ™‚é–“
         yield return new WaitForSeconds(displayTime);
 
-        // µ­³ö„Ó®‹
+        // æ·¡å‡ºå‹•ç•«
         yield return StartCoroutine(FadeOut());
 
-        // äNš§Îï¼ş
+        // éŠ·æ¯€ç‰©ä»¶
         Destroy(gameObject);
     }
 
@@ -124,10 +124,10 @@ public class NotificationUI : MonoBehaviour
             float progress = elapsedTime / fadeInDuration;
             float curvedProgress = animationCurve.Evaluate(progress);
 
-            // Í¸Ã÷¶È„Ó®‹
+            // é€æ˜åº¦å‹•ç•«
             canvasGroup.alpha = curvedProgress;
 
-            // Î»ÖÃ„Ó®‹
+            // ä½ç½®å‹•ç•«
             rectTransform.localPosition = Vector3.Lerp(startPosition, originalPosition, curvedProgress);
 
             elapsedTime += Time.deltaTime;
@@ -149,10 +149,10 @@ public class NotificationUI : MonoBehaviour
             float progress = elapsedTime / fadeOutDuration;
             float curvedProgress = animationCurve.Evaluate(progress);
 
-            // Í¸Ã÷¶È„Ó®‹
+            // é€æ˜åº¦å‹•ç•«
             canvasGroup.alpha = 1f - curvedProgress;
 
-            // Î»ÖÃ„Ó®‹
+            // ä½ç½®å‹•ç•«
             rectTransform.localPosition = Vector3.Lerp(startPosition, endPosition, curvedProgress);
 
             elapsedTime += Time.deltaTime;
@@ -168,13 +168,13 @@ public class NotificationUI : MonoBehaviour
         StartCoroutine(FadeOut());
     }
 
-    // üc“ôÍ¨Öª¿ÉÒÔÁ¢¼´êPé]
+    // é»æ“Šé€šçŸ¥å¯ä»¥ç«‹å³é—œé–‰
     public void OnNotificationClick()
     {
         ForceClose();
     }
 
-    // éÍ¨ÖªÌí¼Ó—ÌøĞ§¹û
+    // ç‚ºé€šçŸ¥æ·»åŠ å½ˆè·³æ•ˆæœ
     public void AddBounceEffect()
     {
         StartCoroutine(BounceEffect());
@@ -188,7 +188,7 @@ public class NotificationUI : MonoBehaviour
         float bounceTime = 0.2f;
         float elapsedTime = 0f;
 
-        // ·Å´ó
+        // æ”¾å¤§
         while (elapsedTime < bounceTime * 0.5f)
         {
             float progress = elapsedTime / (bounceTime * 0.5f);
@@ -198,7 +198,7 @@ public class NotificationUI : MonoBehaviour
             yield return null;
         }
 
-        // ¿sĞ¡
+        // ç¸®å°
         elapsedTime = 0f;
         while (elapsedTime < bounceTime * 0.5f)
         {

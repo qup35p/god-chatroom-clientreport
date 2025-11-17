@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -25,7 +25,7 @@ public class ChatMessage : MonoBehaviour
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
 
-        // 初始設為透明
+        // 鍒濆瑷偤閫忔槑
         canvasGroup.alpha = 0f;
     }
 
@@ -34,27 +34,27 @@ public class ChatMessage : MonoBehaviour
         isPlayer = isPlayerMessage;
         messageText.text = message;
 
-        // 設置訊息對齊
+        // 瑷疆瑷婃伅灏嶉綂
         if (isPlayerMessage)
         {
-            // 玩家訊息靠左
+            // 鐜╁瑷婃伅闈犲乏
             messageText.alignment = TextAlignmentOptions.Left;
             if (backgroundImage != null)
             {
-                backgroundImage.color = customColor ?? new Color(0.2f, 0.6f, 1f, 0.8f); // 藍色背景
+                backgroundImage.color = customColor ?? new Color(0.2f, 0.6f, 1f, 0.8f); // 钘嶈壊鑳屾櫙
             }
         }
         else
         {
-            // 系統訊息靠右
+            // 绯荤当瑷婃伅闈犲彸
             messageText.alignment = TextAlignmentOptions.Right;
             if (backgroundImage != null)
             {
-                backgroundImage.color = customColor ?? new Color(0.8f, 0.8f, 0.8f, 0.8f); // 灰色背景
+                backgroundImage.color = customColor ?? new Color(0.8f, 0.8f, 0.8f, 0.8f); // 鐏拌壊鑳屾櫙
             }
         }
 
-        // 開始淡入動畫
+        // 闁嬪娣″叆鍕曠暙
         StartCoroutine(FadeInAnimation());
     }
 
@@ -118,7 +118,7 @@ public class ChatMessage : MonoBehaviour
         messageText.color = Color.white;
         if (backgroundImage != null)
         {
-            backgroundImage.color = new Color(1f, 0.6f, 0.2f, 0.8f); // 橙色警告
+            backgroundImage.color = new Color(1f, 0.6f, 0.2f, 0.8f); // 姗欒壊璀﹀憡
         }
         messageText.alignment = TextAlignmentOptions.Center;
     }
@@ -128,7 +128,7 @@ public class ChatMessage : MonoBehaviour
         messageText.color = Color.white;
         if (backgroundImage != null)
         {
-            backgroundImage.color = new Color(0.2f, 0.8f, 0.2f, 0.8f); // 綠色成功
+            backgroundImage.color = new Color(0.2f, 0.8f, 0.2f, 0.8f); // 缍犺壊鎴愬姛
         }
         messageText.alignment = TextAlignmentOptions.Center;
     }
@@ -137,7 +137,7 @@ public class ChatMessage : MonoBehaviour
     {
         messageText.text = newMessage;
 
-        // 重新計算佈局
+        // 閲嶆柊瑷堢畻浣堝眬
         LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
     }
 
@@ -149,7 +149,7 @@ public class ChatMessage : MonoBehaviour
     private IEnumerator HighlightEffect(float duration)
     {
         Color originalColor = backgroundImage != null ? backgroundImage.color : Color.white;
-        Color highlightColor = new Color(1f, 1f, 0.3f, 0.8f); // 黃色高亮
+        Color highlightColor = new Color(1f, 1f, 0.3f, 0.8f); // 榛冭壊楂樹寒
 
         float elapsedTime = 0f;
 

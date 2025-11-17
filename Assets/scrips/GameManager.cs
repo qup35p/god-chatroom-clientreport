@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private bool gameActive = true;
 
     [Header("UI References")]
-    public TMP_InputField textInputField; // ¸ÄÓÃ TMP_InputField
+    public TMP_InputField textInputField; // æ”¹ç”¨ TMP_InputField
     public Button submitButton;
     public Transform chatContainer;
     public GameObject playerMessagePrefab;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public ScrollRect chatScrollRect;
 
     [Header("Customer Report")]
-    public TextMeshProUGUI[] customerValueTexts = new TextMeshProUGUI[3]; // êµÂÖµ, ˜IÁ¦Öµ, Õ\Òâ¶È
+    public TextMeshProUGUI[] customerValueTexts = new TextMeshProUGUI[3]; // é™°å¾·å€¼, æ¥­åŠ›å€¼, èª æ„åº¦
     public Button[] increaseButtons = new Button[3];
     public Button[] decreaseButtons = new Button[3];
     public Button confirmButton;
@@ -30,11 +30,11 @@ public class GameManager : MonoBehaviour
     public Button[] referenceButtons = new Button[5];
     public ScrollRect referenceScrollRect;
     private string[] referenceQuestions =  {
-        "ÈêĞĞ½ÖÉÏ£¬ÒŠÒ»ÀÏ‹µøµ¹£¬ÉíÅÔÎåÇ§½ğânëSïLÉ¢¡£ÈôÖ»µÃÒ»Ë²Ö®Åe£¬ÈêÏÈ¾ÈÈË£¬ÒÖ»òÏÈÊ°åX£¿",
-        "ÈêÒŠÒ»º¢ÒÔ¼ÙÅÙIÊ³£¬”‚Ö÷Î´ÓX¡£Èô½Ò´©£¬º¢ğI£»Èô²»ÑÔ£¬Õ`½Ì¡£ÈêºÎßx£¿",
-        "ÓÑÈËÕ`Œ¢ÖØÎïÔÒ‰ÄÈêÎï£¬…sÒÔéŸoÈËÖª•Ô¡£ÈêĞÄÃ÷°×ÕæÏà£¬ÊÇ®”ÃæÖ±ÑÔ£¬ß€ÊÇìoÄ¬×ŒËû°²£¿",
-        "Èêì¶ÓêÒ¹×²‚ûÒ°Øˆ£¬Ü‡Ÿo“p£¬ÈËÎ´ÒŠ¡£Èê•şÍ£Ü‡²é¿´£¬ÒÖ»òßhÈ¥ÒÔÃâÂéŸ©£¿",
-        "ÈêÔÚ¹¤S£¬ÖªÉÏË¾Ö¸Ê¾ÅÅ·ÅUË®ÈëºÓ£¬Èô½Ò°l£¬¿ÖÔâ½â¹Í£»Èôë[²m£¬¹«Ë¾Àû™±¶Ôö¡£ÈêºÎ½â£¿"
+        "æ±è¡Œè¡—ä¸Šï¼Œè¦‹ä¸€è€å«—è·Œå€’ï¼Œèº«æ—äº”åƒé‡‘éˆ”éš¨é¢¨æ•£ã€‚è‹¥åªå¾—ä¸€ç¬ä¹‹èˆ‰ï¼Œæ±å…ˆæ•‘äººï¼ŒæŠ‘æˆ–å…ˆæ‹¾éŒ¢ï¼Ÿ",
+        "æ±è¦‹ä¸€å­©ä»¥å‡å¹£è²·é£Ÿï¼Œæ”¤ä¸»æœªè¦ºã€‚è‹¥æ­ç©¿ï¼Œå­©é¤“ï¼›è‹¥ä¸è¨€ï¼Œèª¤æ•™ã€‚æ±ä½•é¸ï¼Ÿ",
+        "å‹äººèª¤å°‡é‡ç‰©ç ¸å£æ±ç‰©ï¼Œå»ä»¥ç‚ºç„¡äººçŸ¥æ›‰ã€‚æ±å¿ƒæ˜ç™½çœŸç›¸ï¼Œæ˜¯ç•¶é¢ç›´è¨€ï¼Œé‚„æ˜¯éœé»˜è®“ä»–å®‰ï¼Ÿ",
+        "æ±æ–¼é›¨å¤œæ’å‚·é‡è²“ï¼Œè»Šç„¡æï¼Œäººæœªè¦‹ã€‚æ±æœƒåœè»ŠæŸ¥çœ‹ï¼ŒæŠ‘æˆ–é å»ä»¥å…éº»ç…©ï¼Ÿ",
+        "æ±åœ¨å·¥å» ï¼ŒçŸ¥ä¸Šå¸æŒ‡ç¤ºæ’æ”¾å»¢æ°´å…¥æ²³ï¼Œè‹¥æ­ç™¼ï¼Œæé­è§£é›‡ï¼›è‹¥éš±çï¼Œå…¬å¸åˆ©æ½¤å€å¢ã€‚æ±ä½•è§£ï¼Ÿ"
     };
 
     [Header("Audio")]
@@ -55,40 +55,40 @@ public class GameManager : MonoBehaviour
         UpdateTimerDisplay();
         UpdateCustomerValueDisplays();
 
-        // ÔOÖÃ³õÊ¼ÌáÊ¾ÎÄ×Ö
+        // è¨­ç½®åˆå§‹æç¤ºæ–‡å­—
         if (textInputField != null && textInputField.placeholder != null)
         {
             TextMeshProUGUI placeholderText = textInputField.placeholder as TextMeshProUGUI;
             if (placeholderText != null)
             {
-                placeholderText.text = "Õˆİ”ÈëÎÄ×ÖÇé¾³¿¼î}£¬»òüc“ôÑ}Ñu…¢¿¼î}ĞÍ";
+                placeholderText.text = "è«‹è¼¸å…¥æ–‡å­—æƒ…å¢ƒè€ƒé¡Œï¼Œæˆ–é»æ“Šè¤‡è£½åƒè€ƒé¡Œå‹";
             }
         }
 
-        // ³õÊ¼»¯…¢¿¼î}°´âo
+        // åˆå§‹åŒ–åƒè€ƒé¡ŒæŒ‰éˆ•
         for (int i = 0; i < referenceButtons.Length; i++)
         {
-            int index = i; // ±ÜÃâé]°ü†–î}
+            int index = i; // é¿å…é–‰åŒ…å•é¡Œ
             referenceButtons[i].onClick.AddListener(() => SelectReferenceQuestion(index));
         }
     }
 
     private void SetupEventListeners()
     {
-        // Ìá½»°´âo
+        // æäº¤æŒ‰éˆ•
         submitButton.onClick.AddListener(SubmitMessage);
 
-        // ¿Í‘ôˆó±í°´âo
+        // å®¢æˆ¶å ±è¡¨æŒ‰éˆ•
         for (int i = 0; i < 3; i++)
         {
-            int index = i; // ±ÜÃâé]°ü†–î}
+            int index = i; // é¿å…é–‰åŒ…å•é¡Œ
             increaseButtons[i].onClick.AddListener(() => ModifyCustomerValue(index, 1));
             decreaseButtons[i].onClick.AddListener(() => ModifyCustomerValue(index, -1));
         }
 
         confirmButton.onClick.AddListener(ConfirmCustomerValues);
 
-        // İ”Èë¿ò Enter æIÌá½»
+        // è¼¸å…¥æ¡† Enter éµæäº¤
         textInputField.onEndEdit.AddListener((string text) => {
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 
         UpdateTimerDisplay();
 
-        // ×îáá10Ãë¾¯¸æÒôĞ§
+        // æœ€å¾Œ10ç§’è­¦å‘ŠéŸ³æ•ˆ
         if (currentTime <= 10f && currentTime > 9f)
         {
             if (timerWarningSound != null && !audioSource.isPlaying)
@@ -130,9 +130,9 @@ public class GameManager : MonoBehaviour
     private void UpdateTimerDisplay()
     {
         int totalSeconds = Mathf.FloorToInt(currentTime);
-        timerText.text = $"µ¹Ó‹•r£º{totalSeconds}Ãë";
+        timerText.text = $"å€’è¨ˆæ™‚ï¼š{totalSeconds}ç§’";
 
-        // ×îáá30Ãë×ƒ¼tÉ«
+        // æœ€å¾Œ30ç§’è®Šç´…è‰²
         if (currentTime <= 30f)
         {
             timerText.color = Color.red;
@@ -149,21 +149,21 @@ public class GameManager : MonoBehaviour
 
         string messageText = textInputField.text.Trim();
 
-        // ²¥·ÅÒôĞ§
+        // æ’­æ”¾éŸ³æ•ˆ
         if (submitSound != null)
         {
             audioSource.PlayOneShot(submitSound);
         }
 
-        // „“½¨Íæ¼ÒÓÏ¢
+        // å‰µå»ºç©å®¶è¨Šæ¯
         CreateChatMessage(messageText, true);
 
-        // Çå¿Õİ”Èë¿ò
+        // æ¸…ç©ºè¼¸å…¥æ¡†
         textInputField.text = "";
         textInputField.Select();
         textInputField.ActivateInputField();
 
-        // ÑÓßt»ØÍÏµ½yÓÏ¢
+        // å»¶é²å›å¾©ç³»çµ±è¨Šæ¯
         StartCoroutine(DelayedSystemResponse());
     }
 
@@ -173,13 +173,13 @@ public class GameManager : MonoBehaviour
 
         if (gameActive)
         {
-            // Ä£”MÆäËûëŠÄX»Ø¸²µÄÓÏ¢
+            // æ¨¡æ“¬å…¶ä»–é›»è…¦å›è¦†çš„è¨Šæ¯
             string[] responses = {
-                "ÊÕµ½ÄãµÄÓÏ¢ÁË£¡",
-                "ß@‚€Çé›rºÜÓĞÈ¤ÄØ",
-                "ÎÒí¿´¿´ß@‚€†–î}...",
-                "ÁË½âÁË£¬ÖxÖx·ÖÏí",
-                "ß@×ŒÎÒÏëµ½Ò»‚€îËÆµÄÇé›r"
+                "æ”¶åˆ°ä½ çš„è¨Šæ¯äº†ï¼",
+                "é€™å€‹æƒ…æ³å¾ˆæœ‰è¶£å‘¢",
+                "æˆ‘ä¾†çœ‹çœ‹é€™å€‹å•é¡Œ...",
+                "äº†è§£äº†ï¼Œè¬è¬åˆ†äº«",
+                "é€™è®“æˆ‘æƒ³åˆ°ä¸€å€‹é¡ä¼¼çš„æƒ…æ³"
             };
 
             string randomResponse = responses[UnityEngine.Random.Range(0, responses.Length)];
@@ -192,41 +192,41 @@ public class GameManager : MonoBehaviour
         GameObject messagePrefab = isPlayer ? playerMessagePrefab : systemMessagePrefab;
         GameObject messageObj = Instantiate(messagePrefab, chatContainer);
         
-        // ÔOÖÃ»ù±¾ŒÙĞÔ
+        // è¨­ç½®åŸºæœ¬å±¬æ€§
         messageObj.SetActive(true);
         messageObj.name = isPlayer ? $"PlayerMsg_{message}" : $"SystemMsg_{message}";
         
-        // Œ¤ÕÒÎÄ×Ö½M¼şKÔOÖÃ
+        // å°‹æ‰¾æ–‡å­—çµ„ä»¶ä¸¦è¨­ç½®
         TextMeshProUGUI messageText = messageObj.GetComponentInChildren<TextMeshProUGUI>();
         if (messageText != null)
         {
             messageText.text = message;
             
-            // ¸ù“şÓÏ¢îĞÍÔOÖÃ˜ÓÊ½
+            // æ ¹æ“šè¨Šæ¯é¡å‹è¨­ç½®æ¨£å¼
             if (isPlayer)
             {
-                messageText.alignment = TextAlignmentOptions.MidlineRight; // Íæ¼Ò¿¿ÓÒ
+                messageText.alignment = TextAlignmentOptions.MidlineRight; // ç©å®¶é å³
                 messageText.color = Color.white;
             }
             else
             {
-                messageText.alignment = TextAlignmentOptions.MidlineLeft; // Ïµ½y¿¿×ó
-                messageText.color = new Color(0.2f, 0.2f, 0.2f, 1f); // Éî»ÒÉ«
+                messageText.alignment = TextAlignmentOptions.MidlineLeft; // ç³»çµ±é å·¦
+                messageText.color = new Color(0.2f, 0.2f, 0.2f, 1f); // æ·±ç°è‰²
             }
             
-            // ´_±£ÎÄ×Ö×Ô„Ó“QĞĞ
+            // ç¢ºä¿æ–‡å­—è‡ªå‹•æ›è¡Œ
             messageText.enableWordWrapping = true;
             messageText.overflowMode = TextOverflowModes.Overflow;
         }
         
-        // ŠÖÆË¢ĞÂÑ¾ÖÒÔ´_±£¸ß¶ÈÕı´_Ó‹Ëã
+        // å¼·åˆ¶åˆ·æ–°ä½ˆå±€ä»¥ç¢ºä¿é«˜åº¦æ­£ç¢ºè¨ˆç®—
         Canvas.ForceUpdateCanvases();
         LayoutRebuilder.ForceRebuildLayoutImmediate(messageObj.GetComponent<RectTransform>());
         LayoutRebuilder.ForceRebuildLayoutImmediate(chatContainer as RectTransform);
         
-        Debug.Log($"„“½¨ÓÏ¢: {(isPlayer ? "Íæ¼Ò" : "Ïµ½y")} - {message}");
+        Debug.Log($"å‰µå»ºè¨Šæ¯: {(isPlayer ? "ç©å®¶" : "ç³»çµ±")} - {message}");
         
-        // ×Ô„ÓL„Óµ½µ×²¿
+        // è‡ªå‹•æ»¾å‹•åˆ°åº•éƒ¨
         StartCoroutine(ScrollToBottom());
     }
 
@@ -240,13 +240,13 @@ public class GameManager : MonoBehaviour
     {
         if (!gameActive || index >= referenceQuestions.Length) return;
 
-        // ²¥·ÅÒôĞ§
+        // æ’­æ”¾éŸ³æ•ˆ
         if (buttonClickSound != null)
         {
             audioSource.PlayOneShot(buttonClickSound);
         }
 
-        // Œ¢…¢¿¼î}Ä¿·ÅÈëİ”Èë¿ò
+        // å°‡åƒè€ƒé¡Œç›®æ”¾å…¥è¼¸å…¥æ¡†
         textInputField.text = referenceQuestions[index];
         textInputField.Select();
         textInputField.ActivateInputField();
@@ -259,7 +259,7 @@ public class GameManager : MonoBehaviour
         customerValues[index] = Mathf.Clamp(customerValues[index] + change, 0, 100);
         UpdateCustomerValueDisplays();
 
-        // ²¥·ÅÒôĞ§
+        // æ’­æ”¾éŸ³æ•ˆ
         if (buttonClickSound != null)
         {
             audioSource.PlayOneShot(buttonClickSound);
@@ -272,10 +272,10 @@ public class GameManager : MonoBehaviour
         {
             if (customerValueTexts[i] != null)
             {
-                // Ö»ï@Ê¾”µ×Ö£¬ÔOÖÃéüSÉ«¡¢36´óĞ¡¡¢´Öów
+                // åªé¡¯ç¤ºæ•¸å­—ï¼Œè¨­ç½®ç‚ºé»ƒè‰²ã€36å¤§å°ã€ç²—é«”
                 customerValueTexts[i].text = $"<color=yellow><size=36><b>{customerValues[i]}</b></size></color>";
 
-                // ´_±£½M¼şÔOÖÃÕı´_
+                // ç¢ºä¿çµ„ä»¶è¨­ç½®æ­£ç¢º
                 customerValueTexts[i].fontSize = 36;
                 customerValueTexts[i].color = Color.yellow;
                 customerValueTexts[i].fontStyle = FontStyles.Bold;
@@ -288,20 +288,20 @@ public class GameManager : MonoBehaviour
     {
         if (!gameActive) return;
 
-        // ²¥·ÅÒôĞ§
+        // æ’­æ”¾éŸ³æ•ˆ
         if (buttonClickSound != null)
         {
             audioSource.PlayOneShot(buttonClickSound);
         }
 
-        // ï@Ê¾´_ÕJÓÏ¢
-        string confirmMessage = $"¿Í‘ôˆó±íÒÑƒ¦´æ - êµÂÖµ:{customerValues[0]} ˜IÁ¦Öµ:{customerValues[1]} Õ\Òâ¶È:{customerValues[2]}";
+        // é¡¯ç¤ºç¢ºèªè¨Šæ¯
+        string confirmMessage = $"å®¢æˆ¶å ±è¡¨å·²å„²å­˜ - é™°å¾·å€¼:{customerValues[0]} æ¥­åŠ›å€¼:{customerValues[1]} èª æ„åº¦:{customerValues[2]}";
         StartCoroutine(ShowConfirmationMessage(confirmMessage));
     }
 
     private IEnumerator ShowConfirmationMessage(string message)
     {
-        // ¿ÉÒÔÔÚß@ÑeÌí¼Ó´_ÕJÓÏ¢µÄUIï@Ê¾
+        // å¯ä»¥åœ¨é€™è£¡æ·»åŠ ç¢ºèªè¨Šæ¯çš„UIé¡¯ç¤º
         Debug.Log(message);
         yield return new WaitForSeconds(2f);
     }
@@ -310,7 +310,7 @@ public class GameManager : MonoBehaviour
     {
         gameActive = false;
 
-        // ½ûÓÃËùÓĞ»¥„ÓÔªËØ
+        // ç¦ç”¨æ‰€æœ‰äº’å‹•å…ƒç´ 
         submitButton.interactable = false;
         textInputField.interactable = false;
         confirmButton.interactable = false;
@@ -326,13 +326,13 @@ public class GameManager : MonoBehaviour
             referenceButtons[i].interactable = false;
         }
 
-        // ï@Ê¾ß[‘ò½YÊøÓÏ¢
-        CreateChatMessage("•rég½YÊø£¡¸ĞÖxÄúµÄ…¢Åc¡£", false);
+        // é¡¯ç¤ºéŠæˆ²çµæŸè¨Šæ¯
+        CreateChatMessage("æ™‚é–“çµæŸï¼æ„Ÿè¬æ‚¨çš„åƒèˆ‡ã€‚", false);
 
-        Debug.Log("ß[‘ò½YÊø£¡");
+        Debug.Log("éŠæˆ²çµæŸï¼");
     }
 
-    // ¹«é_·½·¨¹©ÆäËûÄ_±¾Õ{ÓÃ
+    // å…¬é–‹æ–¹æ³•ä¾›å…¶ä»–è…³æœ¬èª¿ç”¨
     public bool IsGameActive()
     {
         return gameActive;

@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scrips\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\Chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scrips\\Chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scrips\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\NotificationUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scrips\\NotificationUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\UIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scrips\\UIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\VertexZoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\VertexZoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +39,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scrips\\AudioManager.cs",
+              "ToolTip": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\scrips\\AudioManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:09:07.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chatmessage.cs",
+              "DocumentMoniker": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\Chatmessage.cs",
+              "RelativeDocumentMoniker": "Assets\\scrips\\Chatmessage.cs",
+              "ToolTip": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\Chatmessage.cs",
+              "RelativeToolTip": "Assets\\scrips\\Chatmessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:08:42.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scrips\\GameManager.cs",
+              "ToolTip": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\GameManager.cs",
+              "RelativeToolTip": "Assets\\scrips\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:08:16.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationUI.cs",
+              "DocumentMoniker": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\NotificationUI.cs",
+              "RelativeDocumentMoniker": "Assets\\scrips\\NotificationUI.cs",
+              "ToolTip": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\NotificationUI.cs",
+              "RelativeToolTip": "Assets\\scrips\\NotificationUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:07:43.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scrips\\UIManager.cs",
+              "ToolTip": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\scrips\\UIManager.cs",
+              "RelativeToolTip": "Assets\\scrips\\UIManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T11:06:59.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "VertexZoom.cs",
               "DocumentMoniker": "D:\\\u5927\u4E09\u4E0A\u5C08\u984C\\unity\\\u795E\u660E\u804A\u5929\u5BA4\u542B\u5BA2\u6236\u5831\u8868\\Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\VertexZoom.cs",
               "RelativeDocumentMoniker": "Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\VertexZoom.cs",

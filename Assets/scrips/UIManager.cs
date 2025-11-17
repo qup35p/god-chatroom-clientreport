@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
 
     private void InitializeUI()
     {
-        // ÔOÖÃ³õÊ¼Í¸Ã÷¶È
+        // è¨­ç½®åˆå§‹é€æ˜åº¦
         if (mainTransparentPanel != null)
         {
             mainTransparentPanel.alpha = 0f;
@@ -55,7 +55,7 @@ public class UIManager : MonoBehaviour
 
     private void SetupButtonEffects()
     {
-        // éËùÓĞ°´âoÌí¼Ó‘ÒÍ£Ğ§¹û
+        // ç‚ºæ‰€æœ‰æŒ‰éˆ•æ·»åŠ æ‡¸åœæ•ˆæœ
         Button[] allButtons = FindObjectsOfType<Button>();
 
         foreach (Button button in allButtons)
@@ -63,7 +63,7 @@ public class UIManager : MonoBehaviour
             AddButtonEffect(button);
         }
 
-        // éİ”Èë¿òÌí¼Ó½¹ücĞ§¹û£¨Ö§Ô®ƒÉ·NîĞÍ£©
+        // ç‚ºè¼¸å…¥æ¡†æ·»åŠ ç„¦é»æ•ˆæœï¼ˆæ”¯æ´å…©ç¨®é¡å‹ï¼‰
         InputField[] inputFields = FindObjectsOfType<InputField>();
         foreach (InputField inputField in inputFields)
         {
@@ -85,19 +85,19 @@ public class UIManager : MonoBehaviour
             trigger = button.gameObject.AddComponent<EventTrigger>();
         }
 
-        // »¬ÊóßMÈë
+        // æ»‘é¼ é€²å…¥
         EventTrigger.Entry pointerEnter = new EventTrigger.Entry();
         pointerEnter.eventID = EventTriggerType.PointerEnter;
         pointerEnter.callback.AddListener((data) => { OnButtonHover(button, true); });
         trigger.triggers.Add(pointerEnter);
 
-        // »¬Êóëxé_
+        // æ»‘é¼ é›¢é–‹
         EventTrigger.Entry pointerExit = new EventTrigger.Entry();
         pointerExit.eventID = EventTriggerType.PointerExit;
         pointerExit.callback.AddListener((data) => { OnButtonHover(button, false); });
         trigger.triggers.Add(pointerExit);
 
-        // üc“ô
+        // é»æ“Š
         EventTrigger.Entry pointerClick = new EventTrigger.Entry();
         pointerClick.eventID = EventTriggerType.PointerClick;
         pointerClick.callback.AddListener((data) => { OnButtonClick(button); });
@@ -108,18 +108,18 @@ public class UIManager : MonoBehaviour
     {
         Image backgroundImage = inputField.GetComponent<Image>();
 
-        // Unity ‚÷½y InputField Ê¹ÓÃ²»Í¬µÄÊÂ¼şÏµ½y
+        // Unity å‚³çµ± InputField ä½¿ç”¨ä¸åŒçš„äº‹ä»¶ç³»çµ±
         EventTrigger trigger = inputField.gameObject.GetComponent<EventTrigger>();
         if (trigger == null)
         {
             trigger = inputField.gameObject.AddComponent<EventTrigger>();
         }
 
-        // «@µÃ½¹üc
+        // ç²å¾—ç„¦é»
         EventTrigger.Entry selectEntry = new EventTrigger.Entry();
         selectEntry.eventID = EventTriggerType.Select;
         selectEntry.callback.AddListener((data) => {
-            // ™z²éÎï¼şÊÇ·ñß€´æÔÚ
+            // æª¢æŸ¥ç‰©ä»¶æ˜¯å¦é‚„å­˜åœ¨
             if (this == null || backgroundImage == null) return;
 
             if (backgroundImage != null)
@@ -129,11 +129,11 @@ public class UIManager : MonoBehaviour
         });
         trigger.triggers.Add(selectEntry);
 
-        // Ê§È¥½¹üc
+        // å¤±å»ç„¦é»
         EventTrigger.Entry deselectEntry = new EventTrigger.Entry();
         deselectEntry.eventID = EventTriggerType.Deselect;
         deselectEntry.callback.AddListener((data) => {
-            // ™z²éÎï¼şÊÇ·ñß€´æÔÚ
+            // æª¢æŸ¥ç‰©ä»¶æ˜¯å¦é‚„å­˜åœ¨
             if (this == null || backgroundImage == null) return;
 
             if (backgroundImage != null)
@@ -149,7 +149,7 @@ public class UIManager : MonoBehaviour
         Image backgroundImage = tmpInputField.GetComponent<Image>();
 
         tmpInputField.onSelect.AddListener((string value) => {
-            // ™z²éÎï¼şÊÇ·ñß€´æÔÚ
+            // æª¢æŸ¥ç‰©ä»¶æ˜¯å¦é‚„å­˜åœ¨
             if (this == null || backgroundImage == null) return;
 
             if (backgroundImage != null)
@@ -159,7 +159,7 @@ public class UIManager : MonoBehaviour
         });
 
         tmpInputField.onDeselect.AddListener((string value) => {
-            // ™z²éÎï¼şÊÇ·ñß€´æÔÚ
+            // æª¢æŸ¥ç‰©ä»¶æ˜¯å¦é‚„å­˜åœ¨
             if (this == null || backgroundImage == null) return;
 
             if (backgroundImage != null)
@@ -176,7 +176,7 @@ public class UIManager : MonoBehaviour
         float targetScale = isHovering ? buttonScaleEffect : 1f;
         StartCoroutine(ScaleButton(button.transform, targetScale));
 
-        // ¸Ä×ƒîÉ«Ğ§¹û
+        // æ”¹è®Šé¡è‰²æ•ˆæœ
         Image buttonImage = button.GetComponent<Image>();
         if (buttonImage != null)
         {
@@ -219,7 +219,7 @@ public class UIManager : MonoBehaviour
         Vector3 originalScale = buttonTransform.localScale;
         Vector3 clickScale = originalScale * 0.95f;
 
-        // ¿sĞ¡
+        // ç¸®å°
         float elapsedTime = 0f;
         while (elapsedTime < buttonAnimationDuration * 0.5f)
         {
@@ -230,7 +230,7 @@ public class UIManager : MonoBehaviour
             yield return null;
         }
 
-        // »ÖÍ
+        // æ¢å¾©
         elapsedTime = 0f;
         while (elapsedTime < buttonAnimationDuration * 0.5f)
         {
@@ -294,19 +294,19 @@ public class UIManager : MonoBehaviour
 
     public void ShowCustomerReportSaved()
     {
-        ShowNotification("¿Í‘ôˆó±íÒÑƒ¦´æ£¡", NotificationType.Success);
+        ShowNotification("å®¢æˆ¶å ±è¡¨å·²å„²å­˜ï¼", NotificationType.Success);
     }
 
     public void ShowTimeWarning()
     {
-        ShowNotification("×¢Òâ£ºÊ£ğN•rég²»¶à£¡", NotificationType.Warning);
+        ShowNotification("æ³¨æ„ï¼šå‰©é¤˜æ™‚é–“ä¸å¤šï¼", NotificationType.Warning);
     }
 
     public void ShowGameEnd()
     {
-        ShowNotification("•rég½YÊø£¡", NotificationType.Info);
+        ShowNotification("æ™‚é–“çµæŸï¼", NotificationType.Info);
 
-        // µ­³öËùÓĞÃæ°å
+        // æ·¡å‡ºæ‰€æœ‰é¢æ¿
         if (currentPanelAnimation != null)
         {
             StopCoroutine(currentPanelAnimation);
@@ -325,7 +325,7 @@ public class UIManager : MonoBehaviour
         while (elapsedTime < fadeOutDuration)
         {
             float progress = elapsedTime / fadeOutDuration;
-            float alpha = Mathf.Lerp(1f, 0.5f, progress); // ²»ÍêÈ«µ­³ö£¬±£³ÖÒ»Ğ©¿ÉÒŠĞÔ
+            float alpha = Mathf.Lerp(1f, 0.5f, progress); // ä¸å®Œå…¨æ·¡å‡ºï¼Œä¿æŒä¸€äº›å¯è¦‹æ€§
 
             if (mainTransparentPanel != null)
             {
@@ -342,7 +342,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // °²È«µÄ…f³Ì†¢„Ó·½·¨
+    // å®‰å…¨çš„å”ç¨‹å•Ÿå‹•æ–¹æ³•
     private void SafeStartCoroutine(System.Collections.IEnumerator routine)
     {
         if (this != null && gameObject != null && gameObject.activeInHierarchy)
@@ -353,11 +353,11 @@ public class UIManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Í£Ö¹ËùÓĞ…f³Ì£¬±ÜÃâÔÚäNš§ááÀ^ÀmˆÌĞĞ
+        // åœæ­¢æ‰€æœ‰å”ç¨‹ï¼Œé¿å…åœ¨éŠ·æ¯€å¾Œç¹¼çºŒåŸ·è¡Œ
         StopAllCoroutines();
     }
 
-    // ¹«é_·½·¨¹©ÆäËûÄ_±¾Õ{ÓÃ
+    // å…¬é–‹æ–¹æ³•ä¾›å…¶ä»–è…³æœ¬èª¿ç”¨
     public void SetUIInteractable(bool interactable)
     {
         if (mainTransparentPanel != null)
